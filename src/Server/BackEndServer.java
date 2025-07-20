@@ -48,7 +48,6 @@ public class BackEndServer {
             String line;
             while(true) {
                 try {
-
                     line = Optional.ofNullable(userInputReader.readLine()).orElse("");
                 } catch (Exception e) {
                     throw new RuntimeException(e);

@@ -1,0 +1,88 @@
+
+method applyFieldOrientedSwerve() / applyRobotOrientedSwerve():
+
+What is needed?
+
+1. Lock for the driving, regular setPower and wheel resetting methods and threads.
+2. Lock for the completeRotate and setPowerForCompleteRotate methods and their threads.
+
+
+public class SwerveDrive extends Swerve {
+
+
+
+    public SwerveDrive(Telemetry telemetry, Motor[] turningMotors, Motor[] drivingMotors, IMU imu, GamepadEx gamepadEx, boolean fieldOriented) {
+
+    }
+
+    @Override
+    public void setSwerveModuleState(boolean fieldOriented, double forwardPower, double sidePower, int headingInDegrees, double turningVector, boolean turningLeft) {
+      //If the robot wants to drive field-oriented, drive field oriented, otherwise robot-oriented.
+    }
+
+
+    public void applyFieldOrientedSwerve(int heading, double forwardPower, double sidePower, int headingInDegrees, double turningVector, boolean turningLeft) {
+
+    }
+
+
+    public int calculateTotalHeading(int currentHeading, int targetHeading, int wheelNumber) {
+
+    }
+
+
+    public int calculateReverseHeading(int totalHeading, int normalizedHeading, int wheelHeading) {
+
+    }
+
+    public void applyRobotOrientedSwerve(int heading, double forwardPower, double sidePower, double turningVector, boolean turningLeft) {
+
+    }
+
+    @Override
+    public void stopMotors() {
+
+    }
+    @Override
+    public void resetWheelHeading() {
+
+    }
+
+    @Override
+    public void completeRotate(boolean turningLeft, int imuHeadingInDegrees, double turnVector, boolean fieldOriented) {
+
+    }
+
+    @Override
+    public int normalizeHeading(int currentPosition, int targetPosition) {
+
+    }
+
+    @Override
+    public void setPowerForCompleteRotate(boolean turningLeft, boolean[] headingsReversed, double turningVector, int[] targetPositions, boolean goToPosition) {
+
+    }
+
+    @Override
+    public void setPower(boolean[] headingIsNegative,  double forwardVector) {
+
+    }
+
+    public boolean allWheelsHaveRotatedToPosition() {
+
+    }
+
+    public void setPowerToIndividualWheel(int wheelNumber, boolean headingIsNegative) {
+
+    }
+
+    @Override
+    public SwerveVector getRobotVector() {
+
+    }
+
+    @Override
+    public void periodic() {
+
+    }
+}
